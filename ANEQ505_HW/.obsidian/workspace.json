@@ -196,11 +196,16 @@
       "daily-notes:Open today's daily note": false,
       "templates:Insert template": false,
       "command-palette:Open command palette": false,
-      "bases:Create new base": false
+      "bases:Create new base": false,
+      "obsidian-git:Open Git source control": false
     }
   },
-  "active": "67a5fed037a17603",
+  "active": "d812941d7d9fb0a6",
   "lastOpenFiles": [
+    "04_extra_credit",
+    "03_paper_discussions",
+    "02_class_project",
+    "01_homework",
     "Welcome.md",
     "test.md"
   ]
