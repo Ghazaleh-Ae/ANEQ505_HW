@@ -8,3 +8,11 @@ any other time reservation
 ```
 ainteractive --
 ```
+Make a new directory for the analysis
+```
+# make a directory using the mkdir command
+mkdir decomp_tutorial  
+  
+# move into that directory using cd
+cd decomp_tutorial
+```
