@@ -16,3 +16,31 @@ mkdir decomp_tutorial
 # move into that directory using cd
 cd decomp_tutorial
 ```
+Import metadata and turn on Qiime2
+```
+# we first purge any loaded modules from the node we are on, this ensures no conflicting modules are "on"   
+# modules are preloaded packages of things people commonly use  
+  
+module purge   
+  
+# we can turn "on" or "load" qiime2  
+  
+module load qiime2/2024.10_amplicon
+```
+Copy metadata from its source and move to our new folder and rename it
+```
+# make a directory for the metadata using the mkdir command while you are INSIDE of the decomp_tutorial directory 
+
+mkdir metadata  
+  
+# move into that directory using cd
+
+cd metadata
+
+cp /pl/active/courses/2025_summer/CSU_2025/q2_workshop_final/QIIME2/metadata_q2_workshop.txt .
+
+mv metadata_q2_workshop.txt metadata.txt
+```
+Visualize the metadata file
+```
+```
