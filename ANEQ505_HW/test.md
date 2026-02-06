@@ -43,4 +43,7 @@ mv metadata_q2_workshop.txt metadata.txt
 ```
 Visualize the metadata file
 ```
+qiime metadata tabulate \  
+--m-input-file metadata.txt \  
+--o-visualization metadata.qzv
 ```
