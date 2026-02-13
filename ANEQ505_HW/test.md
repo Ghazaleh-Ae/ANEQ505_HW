@@ -47,3 +47,7 @@ qiime metadata tabulate \
 --m-input-file metadata.txt \  
 --o-visualization metadata.qzv
 ```
+
+```
+you can download FASTA file and change the format to txt to have access to all the sequences
+```
