@@ -104,7 +104,7 @@ cd /scratch/alpine/$USER/cow/demux
 #Below is the command you will run to demultiplex the samples.
 
 qiime demux emp-paired \
---m-barcodes-file ../metadata/ADD BARCODE FILE NAME HERE \
+--m-barcodes-file ../metadata/cow_barcodes.txt \
 --m-barcodes-column barcode \
 --p-rev-comp-mapping-barcodes \
 --p-rev-comp-barcodes \
@@ -129,7 +129,7 @@ qiime demux summarize \
 Fill in the blank to denoise your samples based on what you think should be trimmed (from the front of the reads) or truncated (from the ends of the reads) based on the demux_cow.qzv file. You can run this in the terminal or as a job.
 
 ```
-cd ADD PATH TO DADA2 DIRECTORY
+cd ../dada2
 
 qiime dada2 denoise-paired \
 --i-demultiplexed-seqs ../demux/demux_cow.qza \
@@ -145,7 +145,7 @@ qiime dada2 denoise-paired \
 #Visualize the denoising results:
 qiime metadata tabulate \
 --m-input-file cow_dada2_stats.qza \
---o-visualization YOUR_OUTPUT_FILENAME_HERE.qzv
+--o-visualization cow_dada2_stats.qzv
 
 qiime feature-table summarize \
 --i-table cow_table_dada2.qza \
