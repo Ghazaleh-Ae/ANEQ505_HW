@@ -159,16 +159,16 @@ qiime feature-table tabulate-seqs \
 
 	
 Briefly **describe** the key information from each denoising output file:
-1. Representative Sequences
+1. Representative Sequences: The representative sequences file shows all 4653 unique sequence variants that were identified after denoising. The sequences have a mean length of 253.34 bp, with a minimum length of 250 bp and a maximum of 427 bp. These sequences represent the actual DNA sequences of the microbes found in the cow samples and can be used to identify which bacteria and other microorganisms are present in each sample.
 2. Denoising Stats
-3. Denoised Table
+3. Denoised Table: The denoised table is a matrix that contains the abundance of each sequence variant in all 147 samples. There are 4653 different features (sequence variants) total. The average number of reads per sample is 11115.7, ranging from 0 to 33768 reads depending on the sample.
 
 **Answer the following questions:**  
-1. What is the mean reads per sample?
-2. How long are the reads?
-3. What is the maximum length of all your sequences?
-4. Which sample (not including extraction controls starting with EC) lost the highest % of reads?
-5. Why did you chose to trim or truncate where you did?
+1. What is the mean reads per sample? 11115.7
+2. How long are the reads? 253.34
+3. What is the maximum length of all your sequences? 427 bases
+4. Which sample (not including extraction controls starting with EC) lost the highest % of reads? 2019.3.14.cow.oral.20 lost 84.47% of its reads (only 15.53% passed the filter)
+5. Why did you chose to trim or truncate where you did? I chose not to trim from the front because all the reads had a median quality score higher than 30% from the beginning, so no trimming was necessary at the start. For the truncation length, I chose 250 bp because at base position 251 in the reverse reads, the median quality dropped significantly to 13%, which indicated that the quality degraded after position 250. Therefore, I truncated both forward and reverse reads at 250 bp to remove the low-quality bases at the end.
 
 **To submit your homework from this document:**
 write all of your commands here, then use command+P (for mac) or control+P (for windows) and search Git: commit. click it. then search for Git: Push and click it. go to your github online to check that it pushed correctly. we will check your github for homework credit. 
