@@ -58,10 +58,7 @@ ainteractive --ntasks=6 --time=02:00:00
 #insert your code here to activate qiime. Hint: there should be 2 things you add here
 
 module purge  
-  
 module load qiime2/2024.10_amplicon
-
-
 ```
 
 
@@ -93,7 +90,6 @@ a.    Go into your slurm directory using OnDemand. Create a new file named **
 #SBATCH --mail-user=ghazale@colostate.edu
 
 #What needs to go here in order to “turn on” qiime2? Hint: we do these 2 commands every time we activate qiime2!
-
   
 module purge  
 module load qiime2/2024.10_amplicon
@@ -160,12 +156,12 @@ qiime feature-table tabulate-seqs \
 	
 Briefly **describe** the key information from each denoising output file:
 1. Representative Sequences: The representative sequences file shows all 4653 unique sequence variants that were identified after denoising. The sequences have a mean length of 253.34 bp, with a minimum length of 250 bp and a maximum of 427 bp. These sequences represent the actual DNA sequences of the microbes found in the cow samples and can be used to identify which bacteria and other microorganisms are present in each sample.
-2. Denoising Stats
+2. Denoising Stats: The denoising stats file contains information about how well each sample performed during the denoising process. It shows the number of reads that passed filtering, were denoised, merged, and how many were removed as chimeras. Looking at the data, samples like the nasal ones kept about 90% of their reads, while the oral.20 sample only kept 15.53% of its reads. This file helps us understand which samples had good quality data and which ones lost a lot of reads during processing.
 3. Denoised Table: The denoised table is a matrix that contains the abundance of each sequence variant in all 147 samples. There are 4653 different features (sequence variants) total. The average number of reads per sample is 11115.7, ranging from 0 to 33768 reads depending on the sample.
 
 **Answer the following questions:**  
 1. What is the mean reads per sample? 11115.7
-2. How long are the reads? 253.34
+2. How long are the reads? 253.34 bases
 3. What is the maximum length of all your sequences? 427 bases
 4. Which sample (not including extraction controls starting with EC) lost the highest % of reads? 2019.3.14.cow.oral.20 lost 84.47% of its reads (only 15.53% passed the filter)
 5. Why did you chose to trim or truncate where you did? I chose not to trim from the front because all the reads had a median quality score higher than 30% from the beginning, so no trimming was necessary at the start. For the truncation length, I chose 250 bp because at base position 251 in the reverse reads, the median quality dropped significantly to 13%, which indicated that the quality degraded after position 250. Therefore, I truncated both forward and reverse reads at 250 bp to remove the low-quality bases at the end.
