@@ -6,6 +6,7 @@
       {
         "id": "bd309e6b1895196a",
         "type": "tabs",
+        "dimension": 64.45182724252491,
         "children": [
           {
             "id": "67a5fed037a17603",
@@ -41,6 +42,7 @@
       {
         "id": "2bbd6178190f5819",
         "type": "tabs",
+        "dimension": 35.548172757475086,
         "children": [
           {
             "id": "a33a395d64a067ed",
@@ -109,7 +111,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 202.5
   },
   "right": {
     "id": "7c00a0503be34518",
@@ -215,7 +217,7 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "d812941d7d9fb0a6",
+  "active": "659e892310e0e43a",
   "lastOpenFiles": [
     "01_homework/homework_1_mac.md",
     "04_extra_credit",
