@@ -85,10 +85,10 @@ qiime metadata tabulate \
 ```
 qiime taxa filter-table \
 --i-table ../dada2/cow_table_dada2_filtered300.qza \
---i-taxonomy taxonomy_gg2.qza \
+--i-taxonomy taxonomy_gg2_filtered.qza \
 --p-exclude mitochondria,chloroplast,sp004296775 \
 --p-include c__ \
---o-filtered-table ../dada2/cow_table_dada2_filtered300_nomitochloro.qza
+--o-filtered-table ../dada2/table_nomitochloro_gg2_filtered300.qza
 ```
 
 - Visualize the taxa bar plot
