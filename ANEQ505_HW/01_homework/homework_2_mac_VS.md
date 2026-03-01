@@ -110,6 +110,7 @@ The top 2 most abundant bacterial classes in the fecal samples are Bacteroidia a
 **_Question 3**: What highly abundant ASV is shared between both the udder and skin samples?
 
 **_Question 4**: Which samples (still sorted by body_site) have higher alpha diversity in terms of observed features?
+Fecal samples have the highest alpha diversity in terms of observed features, showing the greatest richness and variety of different bacterial taxa. Oral samples also show high diversity. Skin and udder samples have moderate and similar levels of diversity. Nasal samples have the lowest alpha diversity compared to all other body sites.
 
 **Question 5**: do all samples contain archaea as well?
 
