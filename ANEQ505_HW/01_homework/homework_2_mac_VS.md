@@ -108,6 +108,7 @@ qiime taxa barplot \
 The top 2 most abundant bacterial classes in the fecal samples are Bacteroidia and Clostridia.
 
 **_Question 3**: What highly abundant ASV is shared between both the udder and skin samples?
+Faecousia sp000434635 (Class Clostridia) is the highly abundant ASV shared between both udder and skin samples, represented by the green color in the barplot.
 
 **_Question 4**: Which samples (still sorted by body_site) have higher alpha diversity in terms of observed features?
 Fecal samples have the highest alpha diversity in terms of observed features, showing the greatest richness and variety of different bacterial taxa. Oral samples also show high diversity. Skin and udder samples have moderate and similar levels of diversity. Nasal samples have the lowest alpha diversity compared to all other body sites.
