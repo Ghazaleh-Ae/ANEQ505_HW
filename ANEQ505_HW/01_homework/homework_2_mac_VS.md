@@ -113,6 +113,7 @@ The top 2 most abundant bacterial classes in the fecal samples are Bacteroidia a
 Fecal samples have the highest alpha diversity in terms of observed features, showing the greatest richness and variety of different bacterial taxa. Oral samples also show high diversity. Skin and udder samples have moderate and similar levels of diversity. Nasal samples have the lowest alpha diversity compared to all other body sites.
 
 **Question 5**: do all samples contain archaea as well?
+No, not all samples contain archaea. While many of the real samples do contain archaea, the positive control samples do not contain any archaea, which is expected for controls. Additionally, some of the extraction control (EC) samples also lack archaea, while others contain small amounts. This variation in archaea presence across different sample types suggests that archaea are not uniformly distributed across all samples.
 
 **Question 6**: why do we filter out sp004296775?
 
