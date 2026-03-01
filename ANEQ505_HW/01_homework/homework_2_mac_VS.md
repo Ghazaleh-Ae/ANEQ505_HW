@@ -113,19 +113,25 @@ The top 2 most abundant bacterial classes in the fecal samples are Bacteroidia a
 Fecal samples have the highest alpha diversity in terms of observed features, showing the greatest richness and variety of different bacterial taxa. Oral samples also show high diversity. Skin and udder samples have moderate and similar levels of diversity. Nasal samples have the lowest alpha diversity compared to all other body sites.
 
 **Question 5**: do all samples contain archaea as well?
-No, not all samples contain archaea. While many of the real samples do contain archaea, the positive control samples do not contain any archaea, which is expected for controls. Additionally, some of the extraction control (EC) samples also lack archaea, while others contain small amounts. This variation in archaea presence across different sample types suggests that archaea are not uniformly distributed across all samples.
+
 
 **Question 6**: why do we filter out sp004296775?
+We filter out sp004296775 because it is chloroplast-derived DNA. The reason these chloroplasts show up in our data is due to the endosymbiotic theory, where mitochondria and chloroplasts, likely originating as bacteria, became symbionts in the cytoplasm of eukaryotic cells. Since sp004296775 is a chloroplast, it must be removed from our analysis as it is a contaminant and not a true bacterial taxon we want to study.
 
 **Question 7**: what is the difference between these two flags? 
 --p-exclude mitochondria,chloroplast,sp004296775 \
 --p-include c__ \
 
+The --p-exclude flag tells the q2-taxa filter-table command to remove any ASVs that have these strings of text (mitochondria, chloroplast, or sp004296775) in their taxonomic classification. In contrast, the --p-include flag tells the command to keep only ASVs that have a taxonomic classification down to the class level (indicated by c__). The --p-include flag ensures we only keep well-classified sequences.
+
 **Question 8**: do the positive controls look the same as each other? Yes or No?
+Yes, the positive control samples look similar to each other in community composition. They both show simplified communities with fewer taxa compared to the real samples, which is expected for positive controls.
 
 **Question 9**: Do the negative/extraction controls (Samples labeled as EC), look like the positive controls? Yes or no? 
+For the most part, no, the negative/extraction controls do not look like the positive controls. However, there are a few extraction controls that look suspiciously similar to the positive controls, which might indicate some contamination.
 
 **Question 10**: do the negative/extraction controls (Samples labeled as EC), look like the real samples? Yes or no?
+No, with one or two exceptions, the negative/extraction controls do not look like the real samples. The extraction controls have far fewer taxa and much simpler community composition compared to the real samples, which is what we would expect from extraction blanks that should contain minimal biological material.
 
 ## Phylogenetic tree ~={red}(1point)=~
 
