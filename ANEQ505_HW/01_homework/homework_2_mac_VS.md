@@ -113,7 +113,7 @@ The top 2 most abundant bacterial classes in the fecal samples are Bacteroidia a
 Faecousia sp000434635 (Class Clostridia) is the highly abundant ASV shared between both udder and skin samples, represented by the green color in the barplot.
 
 **_Question 4**: Which samples (still sorted by body_site) have higher alpha diversity in terms of observed features?
-Fecal samples have the highest alpha diversity in terms of observed features, showing the greatest richness and variety of different bacterial taxa. Oral samples also show high diversity. Skin and udder samples have moderate and similar levels of diversity. Nasal samples have the lowest alpha diversity compared to all other body sites.
+Looking at the taxa barplot, fecal, skin, and udder samples have the highest alpha diversity in terms of observed features, with fecal samples showing slightly higher diversity than skin and udder. All three body sites display large numbers of lowly-represented taxa. In comparison, nasal and oral samples show lower alpha diversity.
 
 **Question 5**: do all samples contain archaea as well?
 No, not all samples contain archaea. While archaea are present in many of the real samples, they are not uniformly distributed across all sample types. The control samples do not contain archaea, which is expected for control samples. This indicates that archaea are selectively present in certain body sites of the real cow samples but absent from the control samples.
