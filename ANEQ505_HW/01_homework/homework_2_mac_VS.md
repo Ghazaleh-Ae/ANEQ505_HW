@@ -116,7 +116,7 @@ Faecousia sp000434635 (Class Clostridia) is the highly abundant ASV shared betwe
 Looking at the taxa barplot, fecal, skin, and udder samples have the highest alpha diversity in terms of observed features, with fecal samples showing slightly higher diversity than skin and udder. All three body sites display large numbers of lowly-represented taxa. In comparison, nasal and oral samples show lower alpha diversity.
 
 **Question 5**: do all samples contain archaea as well?
-No, not all samples contain archaea. While archaea are present in many of the real samples, they are not uniformly distributed across all sample types. The control samples do not contain archaea, which is expected for control samples. This indicates that archaea are selectively present in certain body sites of the real cow samples but absent from the control samples.
+Not all samples contain archaea, but the vast majority of them do. Archaea seem to be less abundant in oral and nasal samples compared to other body sites, while fecal samples appear to have higher levels of archaea. Archaea are absent from the controls, which is expected since these control samples would not contain the same microbial communities as the real cow samples.
 
 **Question 6**: why do we filter out sp004296775?
 We filter out sp004296775 because it is chloroplast-derived DNA. The reason these chloroplasts show up in our data is due to the endosymbiotic theory, where mitochondria and chloroplasts, likely originating as bacteria, became symbionts in the cytoplasm of eukaryotic cells. Since sp004296775 is a chloroplast, it must be removed from our analysis as it is a contaminant and not a true bacterial taxon we want to study.
