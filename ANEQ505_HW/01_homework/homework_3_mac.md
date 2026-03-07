@@ -48,10 +48,10 @@ qiime diversity alpha-rarefaction \
 
 ```
 qiime diversity core-metrics-phylogenetic \
---i-table cow_table_dada2_filtered300.qza \
---i-phylogeny INSERT FILE HERE \
---m-metadata-file INSERT FILE HERE \
---p-sampling-depth INSERT SEQ DEPTH HERE \
+--i-table dada2/cow_table_dada2_filtered300.qza \
+--i-phylogeny tree/tree_gg2.qza \
+--m-metadata-file metadata/cow_metadata.txt \
+--p-sampling-depth 1000 \
 --output-dir core_metrics_results
 ```
 
@@ -60,15 +60,20 @@ qiime diversity core-metrics-phylogenetic \
 - generate a plot to visualize the observed features ~={red}(1 point)=~
 ```
 qiime diversity alpha-group-significance \
---i-alpha-diversity core_metrics_results/FILENAME.qza \
+--i-alpha-diversity core_metrics_results/observed_features_vector.qza \
 --m-metadata-file metadata/cow_metadata.txt \
---o-visualization core_metrics_results/OUTPUT-FILENAME.qzv
+--o-visualization core_metrics_results/observed_features_vector.qzv
 ```
 
 - generate a plot to visualize faith's PD ~={red}(2 points)=~
 ```
 ## insert the entire code chunk for generating this visualization 
 
+qiime diversity alpha-group-significance \  
+--i-alpha-diversity
+core-metrics-results/faith_pd_vector.qza \  
+--m-metadata-file metadata/cow_metadata.txt \  
+--o-visualization core-metrics-results/faiths_pd_statistics.qzv
 
 ```
 
