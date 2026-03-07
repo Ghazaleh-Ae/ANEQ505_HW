@@ -69,11 +69,10 @@ qiime diversity alpha-group-significance \
 ```
 ## insert the entire code chunk for generating this visualization 
 
-qiime diversity alpha-group-significance \  
---i-alpha-diversity
-core-metrics-results/faith_pd_vector.qza \  
---m-metadata-file metadata/cow_metadata.txt \  
---o-visualization core-metrics-results/faiths_pd_statistics.qzv
+qiime diversity alpha-group-significance \
+--i-alpha-diversity core_metrics_results/faith_pd_vector.qza \
+--m-metadata-file metadata/cow_metadata.txt \
+--o-visualization core_metrics_results/faith_pd_vector.qzv
 
 ```
 
@@ -82,7 +81,9 @@ core-metrics-results/faith_pd_vector.qza \
 ## Homework questions ~={red}(10 points)=~
 
 1. what is the name of the file you needed to use to figure out what min and max depths to use to generate the alpha rarefaction plot? (Hint: which file contains the sequencing depths for each sample)
+   cow_table_dada2_filtered300.qzv
 2. what did you choose for the rarefaction depth (the input for core metrics -p-sampling-depth flag)? why? 
+   I chose 1000 for the rarefaction depth because looking at the alpha rarefaction curve, the Shannon diversity metric plateaus around 1000 sequencing depth. Beyond 1000, adding more sequences doesn't significantly increase observed diversity, so 1000 is the optimal rarefaction depth.
 3. Which cow body location had more observed features? Which has the lowest?
 4. What is the main difference between Faiths PD and Shannons alpha diversity metrics?  
 5. Which diversity metrics produced by the core-metrics pipeline require phylogenetic information?
