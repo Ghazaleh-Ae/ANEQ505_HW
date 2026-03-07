@@ -40,7 +40,7 @@ qiime diversity alpha-rarefaction \
 --m-metadata-file metadata/cow_metadata.txt \
 --o-visualization alpha_rarefaction_curves_16S.qzv \
 --p-min-depth 3 \
---p-max-depth 20000
+--p-max-depth 10000
 ```
 
 
@@ -48,7 +48,7 @@ qiime diversity alpha-rarefaction \
 
 ```
 qiime diversity core-metrics-phylogenetic \
---i-table INSERT FILTERED TABLE HERE \
+--i-table cow_table_dada2_filtered300.qza \
 --i-phylogeny INSERT FILE HERE \
 --m-metadata-file INSERT FILE HERE \
 --p-sampling-depth INSERT SEQ DEPTH HERE \
