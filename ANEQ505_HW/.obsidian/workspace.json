@@ -28,12 +28,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "01_homework/homework_2_mac_VS.md",
+                "file": "01_homework/homework_3_mac.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "homework_2_mac_VS"
+              "title": "homework_3_mac"
             }
           }
         ],
@@ -220,10 +220,11 @@
   },
   "active": "fc49232f8f12944e",
   "lastOpenFiles": [
+    "01_homework/homework_2_mac_VS.md",
+    "01_homework/homework_3_mac.md",
     "taxaplot.png",
     "Screenshot 2026-03-01 at 1.44.43 AM.png",
     "01_homework/homework_1_mac.md",
-    "01_homework/homework_2_mac_VS.md",
     "04_extra_credit",
     "03_paper_discussions",
     "02_class_project",
