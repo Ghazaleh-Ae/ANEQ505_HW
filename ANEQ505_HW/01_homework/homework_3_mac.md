@@ -106,11 +106,31 @@ Yes, there are definitely groupings in the beta diversity plot. Looking at the u
 I think these samples are grouping together by body site because each body site has its own unique environment. The udder and skin are both external surfaces, so they probably have similar conditions like temperature and exposure to the environment, which means they have similar microbial communities. The nasal and oral samples cluster together because they're both in the upper respiratory and oral regions, which share similar environmental conditions. The fecal samples cluster separately because the gut has very different conditions like pH and nutrient availability compared to the other body sites. Since all the samples come from the same location (CSUPMF), the main reason for the grouping is definitely the body site itself. Each body site just has different physical and chemical conditions that support different types of bacteria.
 
 9. What test can you run to determine if the groups are significantly different?
+A PERMANOVA test can be run to determine if the body site groups are significantly different from each other. This test compares the distances between samples within each group to the distances between groups to see if the groupings are statistically significant. PERMANOVA works well for beta diversity analysis because it can test whether the separation we see in the PCoA plot is actually meaningful or just random variation.
+
 10. What command would you use to run that test?
+The qiime diversity beta-group-significance command can be used to run a PERMANOVA test in Qiime2. I used the unweighted UniFrac distance metric, so the command would be:
+
+```
+qiime diversity beta-group-significance \
+--i-distance-matrix core_metrics_results/unweighted_unifrac_distance_matrix.qza \
+--m-metadata-file metadata/cow_metadata.txt \
+--m-metadata-column body_site \
+--p-method permanova \
+--o-visualization core_metrics_results/unweighted_unifrac_body_site_significance.qzv
+```
+
+However, running PERMANOVA directly in R is recommended for more detailed and clearer statistical results.
+The same test can also be run with the Bray-Curtis distance metric by replacing unweighted_unifrac_distance_matrix.qza with bray_curtis_distance_matrix.qza to check if the results are consistent across different distance metrics.
 
 ```
 #insert command for running the test you suggest from question 7
 
-
+qiime diversity beta-group-significance \
+--i-distance-matrix core_metrics_results/unweighted_unifrac_distance_matrix.qza \
+--m-metadata-file metadata/cow_metadata.txt \
+--m-metadata-column body_site \
+--p-method permanova \
+--o-visualization core_metrics_results/unweighted_unifrac_body_site_significance.qzv
 
 ```
