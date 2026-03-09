@@ -96,6 +96,9 @@ Faith's PD is a phylogenetic alpha diversity metric that takes into account the 
 Faith's PD, Unweighted UniFrac, and Weighted UniFrac require phylogenetic information.
 
 6. Which two body sites have the highest Faiths PD alpha diversity?  Are the groups significantly different?
+The two body sites with the highest Faith's PD alpha diversity are skin and fecal samples. Skin samples have the highest median Faith's PD values (around 53-55), while fecal samples have the second highest (around 43-45).
+   Yes, the groups are significantly different from each other. The overall Kruskal-Wallis test across all body sites shows a highly significant p-value (p < 0.001), indicating that Faith's PD values differ significantly among all body site groups. Additionally, the pairwise comparison between skin and fecal shows they are significantly different from each other (p = 0.0001969, p < 0.05).
+   
 7. Does it seem like there are any groupings in the beta diversity? What are the groupings? 
 8. Why do you think these samples are grouping together? 
 9. What test can you run to determine if the groups are significantly different?
