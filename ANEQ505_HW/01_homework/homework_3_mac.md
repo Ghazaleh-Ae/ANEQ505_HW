@@ -99,8 +99,12 @@ Faith's PD, Unweighted UniFrac, and Weighted UniFrac require phylogenetic inform
 The two body sites with the highest Faith's PD alpha diversity are skin and fecal samples. Skin samples have the highest median Faith's PD values (around 53-55), while fecal samples have the second highest (around 43-45).
    Yes, the groups are significantly different from each other. The overall Kruskal-Wallis test across all body sites shows a highly significant p-value (p < 0.001), indicating that Faith's PD values differ significantly among all body site groups. Additionally, the pairwise comparison between skin and fecal shows they are significantly different from each other (p = 0.0001969, p < 0.05).
    
-7. Does it seem like there are any groupings in the beta diversity? What are the groupings? 
-8. Why do you think these samples are grouping together? 
+7. Does it seem like there are any groupings in the beta diversity? What are the groupings?
+Yes, there are definitely groupings in the beta diversity plot. Looking at the unweighted UniFrac PCoA plot organized by body_site, the samples cluster together based on their body site. Fecal samples cluster in the upper left, while nasal and oral samples cluster together at the bottom right. Udder and skin samples form their own cluster on the left side. The control samples are completely separate from all the cow samples in the upper center area. It's pretty clear that samples from the same body site have more similar microbial communities compared to samples from different body sites. Similar grouping patterns can also be observed when using the Bray-Curtis distance metric, which confirms that the body site is the primary factor driving the microbial community differences.
+
+8. Why do you think these samples are grouping together?
+I think these samples are grouping together by body site because each body site has its own unique environment. The udder and skin are both external surfaces, so they probably have similar conditions like temperature and exposure to the environment, which means they have similar microbial communities. The nasal and oral samples cluster together because they're both in the upper respiratory and oral regions, which share similar environmental conditions. The fecal samples cluster separately because the gut has very different conditions like pH and nutrient availability compared to the other body sites. Since all the samples come from the same location (CSUPMF), the main reason for the grouping is definitely the body site itself. Each body site just has different physical and chemical conditions that support different types of bacteria.
+
 9. What test can you run to determine if the groups are significantly different?
 10. What command would you use to run that test?
 
