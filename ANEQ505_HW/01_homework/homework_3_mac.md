@@ -81,11 +81,17 @@ qiime diversity alpha-group-significance \
 ## Homework questions ~={red}(10 points)=~
 
 1. what is the name of the file you needed to use to figure out what min and max depths to use to generate the alpha rarefaction plot? (Hint: which file contains the sequencing depths for each sample)
-   cow_table_dada2_filtered300.qzv
+cow_table_dada2_filtered300.qzv
+
 2. what did you choose for the rarefaction depth (the input for core metrics -p-sampling-depth flag)? why? 
-   I chose 1000 for the rarefaction depth because looking at the alpha rarefaction curve, the Shannon diversity metric plateaus around 1000 sequencing depth. Beyond 1000, adding more sequences doesn't significantly increase observed diversity, so 1000 is the optimal rarefaction depth.
+I chose 1000 for the rarefaction depth because looking at the alpha rarefaction curve, the Shannon diversity metric plateaus around 1000 sequencing depth. Beyond 1000, adding more sequences doesn't significantly increase observed diversity, so 1000 is the optimal rarefaction depth.
+
 3. Which cow body location had more observed features? Which has the lowest?
-4. What is the main difference between Faiths PD and Shannons alpha diversity metrics?  
+Based on the observed features plot, skin samples clearly had the most observed features with around 270 features. Fecal samples were pretty similar with about the same number of features. Udder samples had fewer features at around 210, followed by oral samples at about 85 features. Nasal samples had the lowest number of observed features among the actual cow body sites, with only around 15-20 features. The positive control samples had even fewer features (around 10-15), but those aren't real cow samples so they don't really count for comparison. So overall, skin had the highest diversity and nasal had the lowest diversity in terms of observed features.
+
+4. What is the main difference between Faiths PD and Shannons alpha diversity metrics?
+Faith's PD is a phylogenetic alpha diversity metric that takes into account the evolutionary relationships between different taxa in a community. Shannon diversity, on the other hand, is a non-phylogenetic metric that only considers the abundance and richness of species without accounting for how closely related they are evolutionarily. In other words, Faith's PD incorporates the phylogenetic tree structure into its calculation, while Shannon diversity does not.
+
 5. Which diversity metrics produced by the core-metrics pipeline require phylogenetic information?
 6. Which two body sites have the highest Faiths PD alpha diversity?  Are the groups significantly different?
 7. Does it seem like there are any groupings in the beta diversity? What are the groupings? 
