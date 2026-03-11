@@ -84,7 +84,7 @@ qiime diversity alpha-group-significance \
 cow_table_dada2_filtered300.qzv
 
 2. what did you choose for the rarefaction depth (the input for core metrics -p-sampling-depth flag)? why? 
-I chose 1500 for the rarefaction depth because looking at the alpha rarefaction curve, the Shannon diversity metric plateaus around 1500 sequencing depth. Beyond 1500, adding more sequences doesn't significantly increase observed diversity, so 1500 is the optimal rarefaction depth.
+I chose a sampling depth of 1500 reads because the alpha rarefaction curve plateaus around 1200 sequencing depth, and choosing 1500 ensures I am well past that plateau point. By setting the rarefaction depth at 1500, I can retain most of my samples while removing low-depth samples that would contribute low-quality data to the analysis. This balances keeping as many samples as possible with ensuring that the remaining samples have sufficient sequencing depth for meaningful diversity analysis.
 
 3. Which cow body location had more observed features? Which has the lowest?
 Based on the observed features plot, fecal samples had the highest number of observed features, followed very closely by skin samples (both around 270 features). Udder samples had fewer features at around 210, followed by oral samples at about 85 features. Nasal samples had the lowest number of observed features among the actual cow body sites, with only around 15-20 features. The positive control samples had even fewer features (around 10-15), but those aren't real cow samples so they don't really count for comparison. So overall, skin had the highest diversity and nasal had the lowest diversity in terms of observed features.
