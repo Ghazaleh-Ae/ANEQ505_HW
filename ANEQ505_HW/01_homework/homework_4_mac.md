@@ -63,19 +63,19 @@ metadata <- read_tsv(```
 **Read in alpha diversity data ~={red}(1 point)=~**
 - Fill in the file path you used in the R Markdown to load the shannon data
 ```
-shannon <- read_tsv("YOUR FILE PATH HERE")
+shannon <- read_tsv("../04_code/alpha_div/shannon.tsv")
 ```
 
 **Read in beta diversity data ~={red}(1 point)=~**
 - Fill in the file path you used in the R Markdown to load the unweighted unifrac data
 ```
-uw_unifrac <- read_tsv("YOUR FILE PATH HERE")
+uw_unifrac <- read_tsv("../04_code/beta_div/unweighted_unifrac.txt")
 ```
 
 **Load in tabulated results ~={red}(1 point)=~**
 - Fill in the file path you used in the R Markdown to load the tabulated_results.tsv
 ```
-tabulated_results <- read_tsv("YOUR FILE PATH HERE")
+tabulated_results <- read_tsv("../04_code/taxonomy/tabulated_results.tsv")
 ```
 
 #### Cow Body Site - ANCOM-BC2 in Qiime2
@@ -110,7 +110,7 @@ qiime feature-table filter-samples \
 ```
 qiime feature-table filter-samples \
 --i-table table_nomitochlorocontrols_gg2_filtered300.qza \
---p-min-frequency YOUR NUMBER HERE \
+--p-min-frequency 5000 \
 --o-filtered-table table_5k.qza
 ```
 
@@ -118,7 +118,7 @@ qiime feature-table filter-samples \
 
 ```
 qiime feature-table filter-features \
---i-table INPUT TABLE \
+--i-table table_5k.qza \
 --p-min-frequency 50 \
 --p-min-samples 20 \
 --o-filtered-table table_5k_abund.qza
