@@ -131,8 +131,8 @@ qiime feature-table filter-features \
 qiime taxa collapse \
 --i-table table_5k_abund.qza \
 --i-taxonomy ../taxonomy/taxonomy_gg2.qza \
---p-level GENUS NUMBER \
---o-collapsed-table table_5k_abund_7.qza
+--p-level 7 \
+--o-collapsed-table table_5k_abund_L7.qza
 ```
 
 
@@ -140,7 +140,7 @@ qiime taxa collapse \
 
 ```
 qiime composition ancombc2 \
---i-table table_5k_abund_7.qza \
+--i-table table_5k_abund_L7.qza \
 --m-metadata-file cow_metadata_nocontrols.txt \
 --p-fixed-effects-formula body_site \
 --o-ancombc2-output ancombc2_results_bodysite_genus.qza
@@ -151,11 +151,11 @@ qiime composition ancombc2 \
 - Generate a barplot to visualize the differentially abundant features. 
 ```
 qiime composition tabulate \
---i-data INPUT FILE \
+--i-data ancombc2_results_bodysite_genus.qza \
 --o-visualization ancombc2_bodysite_genus.qzv
   
 qiime composition ancombc2-visualizer \
-  --i-data INPUT FILE \
+  --i-data ancombc2_results_bodysite_genus.qza \
   --o-visualization ancombc2_barplot_bodysite_genus.qzv
 ```
 
@@ -196,7 +196,7 @@ qiime taxa collapse \
 qiime sample-classifier classify-samples \
 --i-table rarefied_table_no_controls_L7.qza \
 --m-metadata-file ../metadata/cow_metadata_nocontrols.txt \
---m-metadata-column WHAT TO TEST \
+--m-metadata-column bodysite \
 --p-random-state 123 \
 --p-n-jobs 1 \
 --output-dir sample_classifier_results_bodysite
