@@ -130,8 +130,8 @@ qiime feature-table filter-features \
 qiime taxa collapse \
 --i-table table_5k_abund.qza \
 --i-taxonomy ../taxonomy/taxonomy_gg2.qza \
---p-level 7 \
---o-collapsed-table table_5k_abund_L7.qza
+--p-level 6 \
+--o-collapsed-table table_5k_abund_L6.qza
 ```
 
 
@@ -139,7 +139,7 @@ qiime taxa collapse \
 
 ```
 qiime composition ancombc2 \
---i-table table_5k_abund_L7.qza \
+--i-table table_5k_abund_L6.qza \
 --m-metadata-file cow_metadata_nocontrols.txt \
 --p-fixed-effects-formula body_site \
 --o-ancombc2-output ancombc2_results_bodysite_genus.qza
@@ -188,12 +188,12 @@ qiime taxa collapse \
 --i-table rarefied_table_no_controls.qza \
 --i-taxonomy ../taxonomy/taxonomy_gg2.qza \
 --p-level 7 \
---o-collapsed-table rarefied_table_no_controls_L7.qza
+--o-collapsed-table rarefied_table_no_controls_L6.qza
 ```
 
 ```
 qiime sample-classifier classify-samples \
---i-table rarefied_table_no_controls_L7.qza \
+--i-table rarefied_table_no_controls_L6.qza \
 --m-metadata-file ../metadata/cow_metadata_nocontrols.txt \
 --m-metadata-column bodysite \
 --p-random-state 123 \
