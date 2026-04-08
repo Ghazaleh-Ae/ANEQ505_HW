@@ -56,8 +56,7 @@ cow_r
 **Read in metadata ~={red}(1 point)=~**
 - Fill in the file path you used in the R Markdown to load the metadata. 
 ```
-metadata <- read_tsv(```
-"../03_metadata/cow_metadata.txt")
+metadata <- read_tsv("../03_metadata/cow_metadata.txt")
 ```
 
 **Read in alpha diversity data ~={red}(1 point)=~**
