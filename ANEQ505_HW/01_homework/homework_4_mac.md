@@ -188,12 +188,12 @@ qiime taxa collapse \
 --i-table rarefied_table_no_controls.qza \
 --i-taxonomy ../taxonomy/taxonomy_gg2.qza \
 --p-level 7 \
---o-collapsed-table rarefied_table_no_controls_L6.qza
+--o-collapsed-table rarefied_table_no_controls_L7.qza
 ```
 
 ```
 qiime sample-classifier classify-samples \
---i-table rarefied_table_no_controls_L6.qza \
+--i-table rarefied_table_no_controls_L7.qza \
 --m-metadata-file ../metadata/cow_metadata_nocontrols.txt \
 --m-metadata-column bodysite \
 --p-random-state 123 \
