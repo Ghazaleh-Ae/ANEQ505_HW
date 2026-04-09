@@ -168,6 +168,8 @@ qiime composition ancombc2-visualizer \
 4. Why do we filter out samples with low frequency and low abundance ASVs?
 
 5. What was the most enriched genus in skin compared to fecal, and what was the most depleted genus in skin compared to fecal (make sure adjusted p is set to less than 0.05)?
+   
+   Based on the ANCOM-BC2 barplot, the most enriched genus in skin (relative to fecal) is Staphylococcus. This makes sense as it's a primary inhabitant of the skin's dry environment. The most depleted genus in skin compared to fecal is Bacteroides. These are obligate anaerobes that thrive in the gut but are essentially "depleted" or absent on the oxygen-rich surface of the skin.
 	
 
 ## Extra credit~={orange} (3 points)=~ generate a classification model to see how well we can predict cow body site
