@@ -160,6 +160,7 @@ qiime composition ancombc2-visualizer \
 
 ## Homework questions: (~={red}5 POINTS=~)
 1. Describe one way to get data from your qiime2 outputs into a format that can be used for R. 
+   One efficient way to do this is by using the qiime tools export command in the terminal. This allows us to take a QIIME 2 artifact (like our ANCOM-BC results or feature tables) and extract the raw data into a .tsv file. Once exported, these files can be easily read into R using standard functions like read_tsv () for statistical analysis and custom plotting.
 
 2. Which body site appeared most distinct in the taxa bar plot, meaning it was not similar to at least one of the other body sites? Explain why that site looks different. 
 
@@ -168,7 +169,6 @@ qiime composition ancombc2-visualizer \
 4. Why do we filter out samples with low frequency and low abundance ASVs?
 
 5. What was the most enriched genus in skin compared to fecal, and what was the most depleted genus in skin compared to fecal (make sure adjusted p is set to less than 0.05)?
-   
    Based on the ANCOM-BC2 barplot, the most enriched genus in skin (relative to fecal) is Staphylococcus. This makes sense as it's a primary inhabitant of the skin's dry environment. The most depleted genus in skin compared to fecal is Bacteroides. These are obligate anaerobes that thrive in the gut but are essentially "depleted" or absent on the oxygen-rich surface of the skin.
 	
 
@@ -205,6 +205,13 @@ qiime sample-classifier classify-samples \
 
 ### **Questions:**
 1. Why might removing controls be important before downstream analysis? 
+   Removing controls (like extraction blanks or mock communities) is essential because these samples don't represent actual cow biology. If left in, the Machine Learning model might learn to identify a body site based on lab contaminants or artificial patterns rather than real biological signals. This would make the model less accurate when trying to predict real world samples.
+   
 2. what 2 features that are high in fecal samples? 
+   In the feature importance plot, the species Cryptobacteroides sp902787255 and Faecousia sp000434635 stand out as the top predictors for fecal samples. These specific gut-associated taxa are highly unique to the fecal microbiome, making them excellent 'fingerprints' for the model to identify that site.
+   
 3. what are 2 features that are low in nasal?
+   Looking at the classifier results, the genera Parabacteroides_B_862066 and Ruoffia appear at the bottom of the importance list for nasal samples. Their relative absence or low frequency in the nasal cavity helps the machine learning model distinguish those samples from other body sites where these bacteria might be more common.
+   
 4. what is the accuracy of your model, and if the accuracy of the classifier is high, what does that suggest about the microbial compositions of each site?
+   The classification model achieved a baseline accuracy of 88%. This high accuracy suggests that the microbial communities at each body site, fecal, nasal, oral, etc. are distinct enough that a computer can correctly identify the site just by looking at the bacteria present. It confirms that the 'microbial fingerprint' of each site is unique and consistent across the cows in this study.
