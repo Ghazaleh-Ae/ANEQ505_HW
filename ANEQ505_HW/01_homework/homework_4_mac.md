@@ -172,7 +172,7 @@ qiime composition ancombc2-visualizer \
    We filter these out primarily to reduce noise and minimize biological bias. Low Frequency (Sampling Depth): If a sample has very few total sequences, it doesn't provide a fair representation of the community. Low Abundance ASVs: ASVs that only appear a couple of times across entire dataset are often the result of sequencing errors, PCR artifacts, or minor contamination. If we leave them in, they can artificially inflate our diversity scores and make it harder for statistical tools like ANCOM-BC2 to find real, significant patterns. By removing them, we ensure our fingerprint for each body site is built on high quality, reliable data.
 
 5. What was the most enriched genus in skin compared to fecal, and what was the most depleted genus in skin compared to fecal (make sure adjusted p is set to less than 0.05)?
-   Based on the ANCOM-BC2 barplot, the most enriched genus in skin compared to fecal is Atopostipes, which shows the highest positive Log Fold Change. The most depleted genus in skin compared to fecal is Mannheimia, which shows the most significant negative Log Fold Change. This highlights the sharp contrast between the aerobic skin environment and the anaerobic fecal environment.
+   Based on the ANCOM-BC2 barplot, the most enriched genus in skin compared to fecal is Atopostipes, which shows the highest positive Log Fold Change. The most depleted genus in skin compared to fecal is Streptococcus, which shows the most significant negative Log Fold Change. This highlights the sharp contrast between the aerobic skin environment and the anaerobic fecal environment.
 	
 
 ## Extra credit~={orange} (3 points)=~ generate a classification model to see how well we can predict cow body site
@@ -200,7 +200,7 @@ qiime taxa collapse \
 qiime sample-classifier classify-samples \
 --i-table rarefied_table_no_controls_L7.qza \
 --m-metadata-file ../metadata/cow_metadata_nocontrols.txt \
---m-metadata-column bodysite \
+--m-metadata-column body_site \
 --p-random-state 123 \
 --p-n-jobs 1 \
 --output-dir sample_classifier_results_bodysite
