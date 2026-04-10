@@ -211,7 +211,7 @@ qiime sample-classifier classify-samples \
    Removing controls (like extraction blanks or mock communities) is essential because these samples don't represent actual cow biology. If left in, the Machine Learning model might learn to identify a body site based on lab contaminants or artificial patterns rather than real biological signals. This would make the model less accurate when trying to predict real world samples.
    
 2. what 2 features that are high in fecal samples? 
-   In the feature importance plot, the species Cryptobacteroides sp902787255 and Faecousia sp000434635 stand out as the top predictors for fecal samples. These specific gut-associated taxa are highly unique to the fecal microbiome, making them excellent 'fingerprints' for the model to identify that site.
+   The species Cryptobacteroides sp902787255 and Faecousia sp000434635 stand out as the top predictors for fecal samples. These specific gut-associated taxa are highly unique to the fecal microbiome, making them excellent 'fingerprints' for the model to identify that site.
    
 3. what are 2 features that are low in nasal?
    Looking at the heatmap results, the genera Parabacteroides_B_862066 and Ruoffia appear at the bottom of the importance list for nasal samples. Their relative absence or low frequency in the nasal cavity helps the machine learning model distinguish those samples from other body sites where these bacteria might be more common.
