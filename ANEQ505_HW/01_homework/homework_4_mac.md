@@ -214,7 +214,7 @@ qiime sample-classifier classify-samples \
    In the feature importance plot, the species Cryptobacteroides sp902787255 and Faecousia sp000434635 stand out as the top predictors for fecal samples. These specific gut-associated taxa are highly unique to the fecal microbiome, making them excellent 'fingerprints' for the model to identify that site.
    
 3. what are 2 features that are low in nasal?
-   Looking at the classifier results, the genera Parabacteroides_B_862066 and Ruoffia appear at the bottom of the importance list for nasal samples. Their relative absence or low frequency in the nasal cavity helps the machine learning model distinguish those samples from other body sites where these bacteria might be more common.
+   Looking at the heatmap results, the genera Parabacteroides_B_862066 and Ruoffia appear at the bottom of the importance list for nasal samples. Their relative absence or low frequency in the nasal cavity helps the machine learning model distinguish those samples from other body sites where these bacteria might be more common.
    
 4. what is the accuracy of your model, and if the accuracy of the classifier is high, what does that suggest about the microbial compositions of each site?
    The classification model achieved a baseline accuracy of 88%. This high accuracy suggests that the microbial communities at each body site, fecal, nasal, oral, etc. are distinct enough that a computer can correctly identify the site just by looking at the bacteria present. It confirms that the 'microbial fingerprint' of each site is unique and consistent across the cows in this study.
